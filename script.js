@@ -1,6 +1,4 @@
 const displayItems = (item) => {
-    console.log(item);
-
     const menuList = document.querySelector('.menu-list');
 
     const menuItem = document.createElement('a');
@@ -34,6 +32,10 @@ const displayItems = (item) => {
     price.setAttribute('class', 'item-price');
     price.innerHTML = `${item.price}€`;
     itemInfo.append(price);
+
+    menuItem.addEventListener('click', () => {
+        localStorage.setItem('id', item.id);
+    })
 }
 
 fetch('https://643d6a856afd66da6af665bd.mockapi.io/items')

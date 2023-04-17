@@ -14,8 +14,15 @@ body {
     padding: 0 50px;
 }
 
+.content-wrapper {
+    position: relative;
+}
+
 .header-wrapper {
     background-color: #222222;
+    position: sticky;
+    z-index: 10;
+    top: 0;
 }
 
 .header {
@@ -34,12 +41,12 @@ body {
 }
 
 .logo-image {
-    width: 70px;
+    width: 50px;
 }
 
 .logo-text {
     font-family: 'DynaPuff', cursive;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -100,7 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% - 250px);
+    width: calc(100% - 280px);
     padding: 10px 0;
 }
 
@@ -118,6 +125,23 @@ body {
     font-weight: 500;
 }
 
+.arrow-link {
+    background-color: rgba(187, 182, 182, 0.6);
+    padding: 10px 11px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+
+.arrow-link:hover {
+    opacity: 0.7;
+}
+
+.arrow {
+    width: 20px;
+    fill:#545252;
+}
 
 .footer-wrapper {
     background-color: #222222;
@@ -131,4 +155,111 @@ body {
 
 .footer-info {
     color: #e4e2e2;
+}
+
+
+
+
+
+
+.sculpture {
+    margin: 60px 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sculpture-image {
+    width: 50%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.sculpture-info {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sculpture-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sculpture-location {
+    display: flex;
+    align-items: flex-end;
+    color: #515151;
+}
+
+.sculpture-location::before {
+    content: "";
+    background-image: url('https://cdn3.iconfinder.com/data/icons/faticons/32/location-01-512.png');
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.sculpture-price {
+    font-size: 26px;
+    font-weight: 400;
+    color: #004F2D;
+    /* color: #03683d; */
+}
+
+.sculpture-description {
+    margin: 0;
+    line-height: 140%;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    align-self: center;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background-color: #c13643;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    max-width: 150px;
+}
+
+.button-image {
+    width: 20px;
+    height: 20px;
+}
+
+.message-wrapper {
+    height: calc(100vh - 153px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.message {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #299129;
 }

@@ -1,0 +1,8 @@
+{
+  "name": "name 8",
+  "price": 71,
+  "image": "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
+  "description": "description 8",
+  "location": "location 8",
+  "id": "8"
+ }
