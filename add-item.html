@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meniška.lt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600;700&family=Rubik:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="content-wrapper">
+
+    <div class="header-wrapper">
+      <div class="container">
+        <div class="header">
+          <a class="logo-link" href="./index.html">
+            <img class="logo-image" src="./img/logo.png" alt="">
+            <span class="logo-text">Meniška.lt</span>
+          </a>
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="./index.html">Prekės</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="./add-item.html">Pridėti prėkę</a></li>
+            <!-- <li class="navbar-item"><a class="navbar-link" href="#"></a></li> -->
+          </ul>
+          <div class="hamburger-menu">
+            <span class="hamburger-menu-line"></span>
+            <span class="hamburger-menu-line"></span>
+            <span class="hamburger-menu-line"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+      <div class="container">
+        <div class="form">
+          <h2 class="form-title">Pridėkite savo prekę</h2>
+          <div class="form-element">
+            <label for="name">Pavadinimas</label>
+            <input type="text" name="name" id="name" placeholder="Įrašykite pavadinimą" autocomplete="off">
+          </div>
+          <div class="form-element">
+            <label for="price">Kaina</label>
+            <input type="number" name="price" id="price" placeholder="Įrašykite kainą" autocomplete="off">
+          </div>
+          <div class="form-element">
+            <label for="image">Nuotrauka</label>
+            <input type="text" name="image" id="image" placeholder="Įterpkite nuotraukos nuorodą" autocomplete="off">
+          </div>
+          <div class="form-element">
+            <label for="description">Apibūdinimas</label>
+            <input type="text" name="description" id="description" placeholder="Įrašykite apibūdinimą" autocomplete="off">
+          </div>
+          <div class="form-element">
+            <label for="location">Miestas</label>
+            <input type="text" name="location" id="location" placeholder="Įrašykite miestą" autocomplete="off">
+          </div>
+          <button class="button submit" type="submit">
+            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"/>
+            </svg>
+            <span>Pridėti</span>
+          </button>
+          <div class="form-message"></div>
+          <!-- Sėkmingai įkėlta -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="container">
+        <div class="footer">
+          <span class="footer-info">©Copyright 2023 | Meniška.lt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+
+</html>

@@ -44,18 +44,19 @@ fetch(`https://643d6a856afd66da6af665bd.mockapi.io/items/${itemId}`).then(res =>
     sculptureInfo.append(description);
 
     const deleteButton = document.createElement('button');
-    deleteButton.setAttribute('class', 'delete-button');
+    deleteButton.setAttribute('class', 'button delete');
     sculptureInfo.append(deleteButton);
 
     const buttonImage = document.createElement('img');
     buttonImage.setAttribute('class', 'button-image');
-    buttonImage.setAttribute('src', './img/trash.svg')
+    buttonImage.setAttribute('src', './img/trash.png')
     deleteButton.append(buttonImage);
 
     const buttonText = document.createElement('span');
     buttonText.setAttribute('class', 'button-text');
     buttonText.innerHTML = `Ištrinti`;
     deleteButton.append(buttonText);
+
 
     deleteButton.addEventListener('click', () => {
         const sculptureSection = document.querySelector('.sculpture-section');

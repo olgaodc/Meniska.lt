@@ -16,6 +16,7 @@ body {
 
 .content-wrapper {
     position: relative;
+    background-color: #f1f1f1;
 }
 
 .header-wrapper {
@@ -55,12 +56,16 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .navbar-link {
     text-decoration: none;
     color: #e4e2e2;
+}
+
+.navbar-link:hover {
+    opacity: 0.7;
 }
 
 .hamburger-menu{
@@ -95,6 +100,13 @@ body {
     display: flex;
     gap: 30px;
     color: black;
+    border-top: 1px solid rgba(187, 182, 182, 0.6);
+    border-bottom: 1px solid rgba(187, 182, 182, 0.6);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    background-color: rgba(223, 221, 221, 0.6);
 }
 
 .item-image {
@@ -107,7 +119,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% - 280px);
+    width: calc(100% - 320px);
     padding: 10px 0;
 }
 
@@ -118,10 +130,12 @@ body {
 
 .item-description {
     margin: 10px 0 0;
+    color: #515151;
+    line-height: 22px;
 }
 
 .item-price {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -160,23 +174,28 @@ body {
 
 
 
-
+.sculpture-section {
+    display: flex;
+    justify-content: center;
+}
 
 .sculpture {
     margin: 60px 0 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
+    border: 1px solid rgba(187, 182, 182, 0.6)
 }
 
 .sculpture-image {
-    width: 50%;
+    width: 100%;
     max-height: 500px;
     object-fit: cover;
 }
 
 .sculpture-info {
-    width: 50%;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -229,29 +248,38 @@ body {
     line-height: 140%;
 }
 
-.delete-button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    align-self: center;
+    gap: 8px;
     border: none;
     padding: 12px 25px;
-    border-radius: 10px;
-    background-color: #c13643;
+    border-radius: 20px;
     cursor: pointer;
     font-family: 'Rubik', sans-serif;
+    color: white;
     font-size: 16px;
     max-width: 150px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 1px 3px 18px 0px rgba(0,0,0,0.5)
+}
+
+.button.delete {
+    align-self: center;
+    background-color: #c13643;
 }
 
 .button-image {
-    width: 20px;
+    width: 17px;
     height: 20px;
 }
 
 .message-wrapper {
-    height: calc(100vh - 153px);
+    height: calc(100vh - 133px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,5 +289,58 @@ body {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    color: #299129;
+    color: #03683d;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+.form-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.form-element {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-element label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-element input {
+    font-family: 'Rubik', sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+}
+
+.button.submit {
+    background-color: #00896F;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button.submit svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+}
+
+.form-message {
+    height: 38px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #03683d;
 }
