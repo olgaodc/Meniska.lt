@@ -1,3 +1,21 @@
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navigationMenu = document.querySelector('.navbar-list');
+
+hamburgerMenu.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('active');
+    navigationMenu.classList.toggle('active');
+
+});
+
+document.querySelectorAll('.navbar-item').forEach(n => n.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('active');
+    navigationMenu.classList.remove('active');
+}));
+
+
+
+
+
 const displayItems = (item) => {
     const menuList = document.querySelector('.menu-list');
 
