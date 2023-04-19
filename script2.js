@@ -19,7 +19,6 @@ const itemId = localStorage.getItem('id');
 fetch(`https://643d6a856afd66da6af665bd.mockapi.io/items/${itemId}`).then(res => {
     return res.json();
 }).then(item => {
-    // console.log(data);
     const sculpture = document.querySelector('.sculpture');
 
     const image = document.createElement('img');
@@ -90,7 +89,7 @@ fetch(`https://643d6a856afd66da6af665bd.mockapi.io/items/${itemId}`).then(res =>
             method: 'DELETE'
         }).then(res => {
             sculpture.remove();
-            message.innerHTML = `Sėkmingai ištrinta`;
+            message.innerHTML = `Prekė pašalinta iš katalogo`;
             console.log(res, 'Resource deleted successfully');
             
             setTimeout(() => {

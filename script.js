@@ -14,8 +14,6 @@ document.querySelectorAll('.navbar-item').forEach(n => n.addEventListener('click
 
 
 
-
-
 const displayItems = (item) => {
     const menuList = document.querySelector('.menu-list');
 

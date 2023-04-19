@@ -28,12 +28,12 @@ const postSculpture = (newSculpture) => {
         .then((data) => {
             return data.json();
         }).then((data) => {
-            const formMessage = document.querySelector('.form-message');
-            formMessage.innerHTML = 'Sėkmingai įkėlta';
-
             setTimeout(() => {
                 window.location.replace('./index.html')
             }, 1000);
+            // document.querySelectorAll(".form input").forEach(function(input) {
+            //     input.value = "";
+            // });
         });
 };
 
@@ -45,13 +45,23 @@ submitButton.addEventListener('click', () => {
     const description = document.getElementById('description').value;
     const location = document.getElementById('location').value;
     
+    const formMessage = document.querySelector('.form-message');
 
-    const newSculpture = {
-        name: name,
-        price: price,
-        image: image,
-        description: description,
-        location: location,         
+    if(name && price && image && description && location) {
+        formMessage.style.color = '#03683d';
+        formMessage.innerHTML = 'Prekė įkelta sėkmingai';
+
+        const newSculpture = {
+            name: name,
+            price: price,
+            image: image,
+            description: description,
+            location: location,         
+        }
+
+        postSculpture(newSculpture);
+    } else {
+        formMessage.style.color = 'rgb(187 32 47)';
+        formMessage.innerHTML = 'Užpildykite visus laukus';
     }
-    postSculpture(newSculpture);
 })
